@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
 <%@ page import="java.io.*,java.util.*, java.util.Date, 
 				 java.time.LocalDate, java.text.SimpleDateFormat"%>
 <%@ page import="java.sql.*"%>
@@ -10,10 +10,8 @@
 
 <%
 try {
-	Class.forName("com.mysql.jdbc.Driver");
-    Connection connection = DriverManager.getConnection(
-   		"jdbc:mysql://localhost/auction?user=root&password=root"
-   	); 
+	ApplicationDB db = new ApplicationDB();
+	Connection connection = db.getConnection();
 	String query;
     Statement statement;
 	out.println("<table border='1'>");		

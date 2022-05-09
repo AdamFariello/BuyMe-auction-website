@@ -14,10 +14,8 @@
 </html>
 <%
 	try {
-		Class.forName("com.mysql.jdbc.Driver");
-	    Connection connection = DriverManager.getConnection(
-    		"jdbc:mysql://localhost/auction?user=root&password=root"
-    	); 
+		ApplicationDB db = new ApplicationDB();
+		Connection connection = db.getConnection(); 
 		String query;
 	    Statement statement;
 		out.println("<table border='1'>");		

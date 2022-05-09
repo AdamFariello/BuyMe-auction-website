@@ -6,11 +6,8 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <% 
 	try {
-		//Connection
-		Class.forName("com.mysql.jdbc.Driver");
-	    Connection connection = DriverManager.getConnection(
-    		"jdbc:mysql://localhost/auction?user=root&password=root"
-    	);
+		ApplicationDB db = new ApplicationDB();
+		Connection connection = db.getConnection();
 		
 	    //Setup
 		String question = request.getParameter("question");	        	
