@@ -4,9 +4,11 @@
 <!--Import some libraries that have classes that we need -->
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ page import="com.cs336.pkg.ApplicationDB" %>
+
 <% try {
-	ApplicationDB db = new ApplicationDB();
-	Connection connection = db.getConnection();
+		ApplicationDB db = new ApplicationDB();
+		Connection connection = db.getConnection();
 	    
 	    String userid = request.getParameter("uname");
 	    String pwd = request.getParameter("psswrd");
