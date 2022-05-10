@@ -6,13 +6,13 @@
 				 java.time.LocalDate, java.text.SimpleDateFormat"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ page import="com.cs336.pkg.ApplicationDB" %>
 <% 
 	try {
 		/*Conection Setup*/
-		Class.forName("com.mysql.jdbc.Driver");
-	    Connection connection = DriverManager.getConnection(
-    		"jdbc:mysql://localhost/auction?user=root&password=root"
-    	); 
+		ApplicationDB db = new ApplicationDB();
+		Connection connection = db.getConnection();
+ 
 	    String query; 
 	    Statement statement = connection.createStatement();
 	    ResultSet rs;

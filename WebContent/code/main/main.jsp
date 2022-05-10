@@ -11,7 +11,7 @@
 <h3 style="text-align:center;"> Select an account type to login:</h3>
 	<p style="text-align:center;">
 	<a href="/cs336sample1/code/endUser/login/login.jsp">Customer</a><br>
-	<a href="cRepLogin.jsp">Customer Representative</a><br>
+	<a href="/cs336sample1/code/customerRep/login/custreplogin.jsp">Customer Representative</a><br>
 	<a href="adminLogin.jsp">Admin</a><br>
 	</p>
 </body>

@@ -4,16 +4,16 @@
 				 java.time.LocalDate, java.text.SimpleDateFormat"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ page import="com.cs336.pkg.ApplicationDB" %>
 
 <!DOCTYPE html>
 <a href="/cs336sample1/code/endUser/ebay/defaultPage.jsp" >HOME<br/> </a>
 
 <%
 try {
-	Class.forName("com.mysql.jdbc.Driver");
-    Connection connection = DriverManager.getConnection(
-   		"jdbc:mysql://localhost/auction?user=root&password=root"
-   	); 
+    ApplicationDB db = new ApplicationDB();
+    Connection connection = db.getConnection();
+    
 	String query;
     Statement statement;
 	out.println("<table border='1'>");		

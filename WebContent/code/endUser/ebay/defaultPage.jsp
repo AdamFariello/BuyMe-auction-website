@@ -1,5 +1,5 @@
 Welcome <%=session.getAttribute("user")%> 
-<a href='logout.jsp'>Log out</a>
+<a href='/cs336sample1/code/endUser/login/logout.jsp'>Log out</a>
 <h1 style="text-align:center;"> Start a new Auction</h1>
 	<div style="text-align:center;"> 
 	<button onclick="document.location=

@@ -4,19 +4,20 @@
 <!--Import some libraries that have classes that we need -->
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ page import="com.cs336.pkg.ApplicationDB" %>
 <% 
 	try {
 		//Connection
-		Class.forName("com.mysql.jdbc.Driver");
-	    Connection connection = DriverManager.getConnection(
-    		"jdbc:mysql://localhost/auction?user=root&password=root"
-    	);
+	    ApplicationDB db = new ApplicationDB();
+   	 	Connection connection = db.getConnection();
 		
 	    //Setup
 		String question = request.getParameter("question");	        	
-	    String statement = "INSERT INTO question(question) VALUES (?)";
+	    String statement = "INSERT INTO question(question, questionReply) "
+	    				 + "VALUES (?, ?)";
     	PreparedStatement ps = connection.prepareStatement(statement);
     	ps.setString(1, question);
+    	ps.setString(2, "No response yet");
     	ps.executeUpdate();
     	response.sendRedirect("searchFAQ.jsp");
 	} catch (Exception e) {

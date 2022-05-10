@@ -1,10 +1,10 @@
  <%@ page import ="java.sql.*" %>
  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" import="com.cs336.pkg.*"%>
-<!--Import some libraries that have classes that we need -->
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ page import="com.cs336.pkg.ApplicationDB" %>
+
 
 <% 
 try {
@@ -23,11 +23,11 @@ try {
    	ResultSet rs = statement.executeQuery(query);	  
    	
    	if (rs.next()) {
-   		session.setAttribute("user", userid);
-           response.sendRedirect("/cs336sample1/code/endUser/ebay/defaultPage.jsp");
-       } else {
-           out.println("Invalid password <a href='login.jsp'>try again</a>");
-       }
+		session.setAttribute("user", userid);
+        response.sendRedirect("/cs336sample1/code/endUser/ebay/defaultPage.jsp");
+    } else {
+        out.println("Invalid password <a href='login.jsp'>try again</a>");
+    }
 } catch (Exception e) {
 	out.println(e);
 }
