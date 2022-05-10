@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-<a href="/cs336Sample1/code/endUser/ebay/defaultPage.jsp" >HOME<br/> </a>
+<a href="/cs336sample1/code/endUser/ebay/defaultPage.jsp" >HOME<br/> </a>
 
 </div>
 

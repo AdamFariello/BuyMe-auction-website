@@ -37,7 +37,7 @@
 		ps.setDouble(2, bidIncrement);
 		ps.setString(3, userName);
 		ps.setInt(4, itemID);
-		ps.executeUpdate();			
+		ps.executeUpdate();		
 	} else {
 		//User has not setup a autoBid
 		query = "INSERT INTO autoBid VALUE(?, ?, ?, ?) ";

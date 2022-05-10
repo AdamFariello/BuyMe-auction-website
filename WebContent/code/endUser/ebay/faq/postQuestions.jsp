@@ -7,7 +7,7 @@
 <title>Post Questions</title>
 </head>
 <body>
-<a href="/cs336Sample1/code/endUser/ebay/defaultPage.jsp">HOME<br/> </a>
+<a href="/cs336sample1/code/endUser/ebay/defaultPage.jsp">HOME<br/> </a>
 		<h1 style="text-align:center;"> Post a Question to Customer Service</h1>
 		<div style="text-align:center;"> 
    <form action="createQuestion.jsp">
