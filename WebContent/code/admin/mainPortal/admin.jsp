@@ -9,11 +9,11 @@
 <body>
 Welcome <%=session.getAttribute("admin")%> 
 to the admin page
-<a href='logout.jsp'>Log out</a>
+<a href='/cs336sample1/code/admin/login/adminLogin.jsp'>Log out</a>
       <h1 style="text-align:center;"> Register a new customer representative</h1>
 
 <form style="text-align:center;" 
-	  action="registercustomerrep.jsp" 
+	  action="/cs336sample1/code/admin/mainPortal/cRepManip/registercustomerrep.jsp" 
 	  style="text-align:center;">
         <label for="fname">Customer Representative Username:</label><br>
         <input type="text" id="newcustuname" name="newcustuname"><br>

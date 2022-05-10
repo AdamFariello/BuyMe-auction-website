@@ -4,15 +4,14 @@
 <!--Import some libraries that have classes that we need -->
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ page import="com.cs336.pkg.ApplicationDB" %>
+
 <% 
 	try {
 		/*Setup*/
 		//Connection 
-	    Class.forName("com.mysql.jdbc.Driver");
-	    Connection connection = DriverManager.getConnection(
-    			//"jdbc:mysql://localhost/auction?user=root&password=V0iceActre$$"
-	    		"jdbc:mysql://localhost/auction?user=root&password=root"
-    	);
+	    ApplicationDB db = new ApplicationDB();
+		Connection connection = db.getConnection();
 	    
 	    //General
 	    String query;
@@ -34,7 +33,12 @@
     	ps.setString(1, userid);
     	ps.executeUpdate();
     	
-    	response.sendRedirect("custrepregistrationSuccess.jsp");
+    	out.println("customer representative has been registered");
+    	out.print("login with it: ");
+    	out.print("<a href='/cs336sample1/code/customerRep/custreplogin.jsp'>click here<br/>>");
+    	out.println("Or go back: ");
+    	out.print("<a href='/cs336sample1/code/admin/mainPortal/admin.jsp'>click here<br/>");
+    	
 	} catch (Exception e) {
 		out.println(e);
     	response.sendRedirect("custrepregistrationFailed.jsp");

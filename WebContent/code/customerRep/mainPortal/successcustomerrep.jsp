@@ -1,10 +1,11 @@
  <%
     if ((session.getAttribute("custrep") == null)) {%>
 		You are not logged in<br/>
-		<a href="/cs336sample1/code/endUser/ebay/custreplogin.jsp">
+		<a href="/cs336sample1/code/customerRep/login/custreplogin.jsp">
 		Please Login</a>
 	<%} else { %>
-		<a href='logout.jsp'>Log out</a>
+		<a href="/cs336sample1/code/customerRep/login/custreplogin.jsp">
+		   Log out</a>
 		<br>
 		
 		Welcome <%=session.getAttribute("custrep")%> 

@@ -18,6 +18,9 @@
 
 		<a href="/cs336sample1/code/endUser/register/register.jsp">
       	   New user? No problem sign up below!</a>
+    	<br>
+    	<a href="/cs336sample1/code/main/main.jsp">
+      	   Not a user? Go back to portal</a>
       	<br>
 		</body>
 </html>

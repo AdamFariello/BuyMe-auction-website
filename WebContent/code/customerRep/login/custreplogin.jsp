@@ -16,6 +16,7 @@
 			<button>Login</button>
 			</form>
 		<a href="/cs336sample1/code/main/main.jsp" 
-		  text-align:center;> Back to main login page<br/>
+		  text-align:center;> Back to main login page
+		<br/>
 	</body>
 </html>
