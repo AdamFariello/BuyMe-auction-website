@@ -16,7 +16,7 @@
         	<button>Login</button>
       		</form>
 
-		<a href="/cs336Sample1/code/endUser/register/register.jsp">
+		<a href="/cs336sample1/code/endUser/register/register.jsp">
       	   New user? No problem sign up below!</a>
       	<br>
 		</body>

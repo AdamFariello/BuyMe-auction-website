@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"  import="com.cs336.pkg.*"%>
+    pageEncoding="ISO-8859-1"%>
 <%@ page import="java.io.*,java.util.*, java.util.Date, 
 				 java.time.LocalDate, java.text.SimpleDateFormat"%>
 <%@ page import="java.sql.*"%>
@@ -7,9 +7,11 @@
 <%@ page import="com.cs336.pkg.ApplicationDB" %>
 <%
 	try {
-		ApplicationDB db = new ApplicationDB();
-		Connection connection = db.getConnection();
-
+		Class.forName("com.mysql.jdbc.Driver");
+	    Connection connection = DriverManager.getConnection(
+    		"jdbc:mysql://localhost/auction?user=root&password=root"
+    	); 
+	    	    
 	    /*Setup the query*/  
 	    int itemID = Integer.parseInt(request.getParameter("itemID"));
 	    String query = "SELECT b.bidderUsername, b.bidAmount "

@@ -9,8 +9,10 @@
 <% 
 	try {
 		/*Conection Setup*/
-		ApplicationDB db = new ApplicationDB();
-		Connection connection = db.getConnection();
+		Class.forName("com.mysql.jdbc.Driver");
+	    Connection connection = DriverManager.getConnection(
+    		"jdbc:mysql://localhost/auction?user=root&password=root"
+    	); 
 	    String query; 
 	    Statement statement = connection.createStatement();
 	    ResultSet rs;
@@ -18,7 +20,7 @@
 		//Grabbing Input
 		int itemID = Integer.parseInt(request.getParameter("itemID"));
 		double bid = Double.parseDouble(request.getParameter("bid"));
-		String userID = session.getAttribute("user").toString();
+		String userID = (String) session.getAttribute("user");
 		
 		//Grabing the maximum bid
 		query = "Select MAX(b.bidAmount) "

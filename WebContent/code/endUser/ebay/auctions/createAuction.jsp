@@ -7,8 +7,10 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <% try {
-	ApplicationDB db = new ApplicationDB();
-	Connection connection = db.getConnection();
+	  	Class.forName("com.mysql.jdbc.Driver");
+	    Connection connection = DriverManager.getConnection(
+    		"jdbc:mysql://localhost/auction?user=root&password=root"
+    	); 
 	    
 	    /*Auction table*/
 	    String userid 				 = (String)session.getAttribute("user");

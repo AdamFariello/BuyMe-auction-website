@@ -5,12 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ApplicationDB {
-	
-	public ApplicationDB(){
-		
-	}
+	public ApplicationDB() {}
 
-	public Connection getConnection(){
+	public Connection getConnection() {
 		//Create a connection string
 		String connectionUrl = "jdbc:mysql://localhost:3306/auction";
 		Connection connection = null;
@@ -36,15 +33,13 @@ public class ApplicationDB {
 			e.printStackTrace();
 		}
 		
-		return connection;
-		
+		return connection;	
 	}
 	
 	public void closeConnection(Connection connection){
 		try {
 			connection.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
