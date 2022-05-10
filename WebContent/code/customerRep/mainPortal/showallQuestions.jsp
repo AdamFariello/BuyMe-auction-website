@@ -25,7 +25,7 @@
 		String query = "SELECT question, questionReply "
 			      	 + "FROM question "
 		;
-	    Statement statement = connection.createStatement();;
+	    Statement statement = connection.createStatement();
 	    ResultSet rs = statement.executeQuery(query);
 	    
 		if (rs.next())	{
@@ -60,8 +60,9 @@
 							+"/cs336sample1/code/customerRep/mainPortal/faq"
 							+"/submitQuestion.jsp'"
 						);
-						out.print("<input type='hidden' id='question' name='question'>"); 
 						out.print("<input type='submit' value='Enter'>");
+						out.print("<input type='hidden' id='question' name='question' ");
+						out.print("value= "+rs.getString(1)+ "'>");
 						out.print("</form>");
 					out.print("</td>");
 					

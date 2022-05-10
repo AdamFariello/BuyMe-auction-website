@@ -6,11 +6,9 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>'
 <%@ page import="com.cs336.pkg.ApplicationDB" %>
 <%
-	try {
-		Class.forName("com.mysql.jdbc.Driver");
-	    Connection connection = DriverManager.getConnection(
-    		"jdbc:mysql://localhost/auction?user=root&password=root"
-    	); 
+	try { 
+	    ApplicationDB db = new ApplicationDB();
+	    Connection connection = db.getConnection();
 	    	    
 	    /*Setup the query*/  
 	    int itemID = Integer.parseInt(request.getParameter("itemID"));

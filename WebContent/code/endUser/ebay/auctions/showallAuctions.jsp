@@ -44,8 +44,11 @@ try {
 	       	  +		   " FROM tag "
 	       	  +		   " WHERE itemID = i.itemID"
 	       	  +		   ")"
-	       	  + "FROM item i, category c, tag t, bid b "
-			  + "WHERE c.categoryID = i.categoryID AND i.itemID = t.itemID AND b.itemId = i.itemID "
+	       	  + "FROM item i, category c, tag t, bid b, openAuction o "
+			  + "WHERE c.categoryID = i.categoryID " 
+			  + "  AND i.itemID = t.itemID "
+			  +	"  AND i.itemID = b.itemID "
+			  + "  AND i.itemID = o.itemID "
 			  + "GROUP BY i.itemID"
 		;
 		

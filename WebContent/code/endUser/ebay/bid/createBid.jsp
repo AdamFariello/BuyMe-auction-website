@@ -51,7 +51,12 @@
 			ps.setDouble(2, bid);
 			ps.setString(3, userID);
 			ps.executeUpdate();			
-			response.sendRedirect("showAllBids.jsp");
+			
+			out.println("Bid placed");
+			
+			//TODO ?
+			//request.setAttribute("itemID", itemID);
+			//response.sendRedirect("showAllBids.jsp");
 		} else {
 			out.println("bid too low or illegal");
 		}

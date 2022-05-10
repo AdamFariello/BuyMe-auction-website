@@ -10,7 +10,6 @@
 		ApplicationDB db = new ApplicationDB();
 		Connection connection = db.getConnection();
 
-	    
 	    /*Auction table*/
 	    String userid 				 = (String)session.getAttribute("user");
 	    String itemName   			 = request.getParameter("brand");

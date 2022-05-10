@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>MY MAILBOX</title>
+</head>  <h1 style="text-align:center;"> MY MAILBOX</h1>
+
+<body>
+
+<form style="text-align:center;" action="checkWinningAuction.jsp" method= "post">
+    <h2>ALERTS</h2>
+    <p>Click on the "x" symbol to close the alert message.</p>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>YOU HAVE WON!</strong> You have sucessfully won an auction!
+        <button ondblclick="mySave()">
+            See Item
+        </button>
+    </div>
+
+    <h3>Someone has placed a higher bid!</h3>
+    <button ondblclick="mybid()">
+        Make higher bid
+    <button ondblclick="mybid()">
+        Remove myself from bid
+    </button>
+
+    <h3> You May Also Like...</h3>
+    <p> A list of items you may be interested in (Based off of previous items you have bought)</p>
+    <button ondblclick="mayLike()">
+        Items You May Be Interested In
+      </button>
+
+    <h4>The Item You Saved is now Available!</h4>
+    <button ondblclick="mySave()">
+        Show Saved Item
+      </button>
+        
+      </form>
+		 <a href="main.jsp" text-align:center;> Back to Main Page<br/>
+</body>
+</html>

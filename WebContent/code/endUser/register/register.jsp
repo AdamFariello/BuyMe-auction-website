@@ -18,5 +18,9 @@
         <label for="lname">Password:</label><br>
         <input type="text" id="newpsswrd" name="newpsswrd"><br><br>
         <input type="submit" value="Enter">
+      	<br>
+      	
+ 	    <a href="/cs336sample1/code/endUser/login/login.jsp">
+   	   	Already a user? Log in!</a>
   </body>
 </html>
