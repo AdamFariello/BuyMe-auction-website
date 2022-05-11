@@ -56,13 +56,15 @@
 					}
 					
 					out.print("<td>");
-						out.print("<form action='"
-							+"/cs336sample1/code/customerRep/mainPortal/faq"
-							+"/submitQuestion.jsp'"
-						);
-						out.print("<input type='submit' value='Enter'>");
+					
+						out.print("<form ");
+						out.print("action='/cs336sample1/code/customerRep"
+								 		 +"/mainPortal/faq/submitQuestion.jsp'"
+						); 
+						out.print("method='post'>");
+						out.print("<button>Click</button>");
 						out.print("<input type='hidden' id='question' name='question' ");
-						out.print("value= "+rs.getString(1)+ "'>");
+						out.print("value='"+rs.getString(1)+ "' >");
 						out.print("</form>");
 					out.print("</td>");
 					
