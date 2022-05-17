@@ -35,7 +35,7 @@
 	</div>
 	<h1 style="text-align:center;"> Bid History</h1>
 		<div style="text-align:center;"> 
-		<form action='/cs336sample1/code/endUser/ebay/auctions/bid/showAllBids.jsp'>
+		<form action='/cs336Sample1/code/endUser/ebay/auctions/bid/showAllBids.jsp'>
 			<input type="submit" value="Enter">
 			<%
 				//You can't invoke a jsp variable from html
@@ -48,7 +48,7 @@
 		
 	<h1 style="text-align:center;"> Bid on this Item</h1>
 		<div style="text-align:center;"> 
-		<form action="/cs336sample1/code/endUser/ebay/auctions/bid/createBid.jsp">
+		<form action="/cs336Sample1/code/endUser/ebay/auctions/bid/createBid.jsp">
 			<label for="fname"> Enter Bid:</label><br>
 	  		<input type="text" maxlength="10" id="bid" name="bid"><br>
 			<input type="submit" value="Enter">
@@ -59,7 +59,7 @@
 			%>	
 		</form>			
 	<h1 style="text-align:center;"> "Want to set an automatic bid?"</h1>
-		<form action="/cs336sample1/code/endUser/ebay/auctions/bid/bid_createAutoBid.jsp">
+		<form action="/cs336Sample1/code/endUser/ebay/auctions/bid/bid_createAutoBid.jsp">
 			<label for="fname"> Set Bid Limit:</label><br>
 		  	<input type="text" maxlength="10" id="bidLimit" name="bidLimit"><br>
 		  	<label for="fname"> Set Bid Increment:</label><br>

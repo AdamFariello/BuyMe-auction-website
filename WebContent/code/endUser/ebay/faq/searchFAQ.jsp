@@ -4,7 +4,7 @@
 				 java.time.LocalDate, java.text.SimpleDateFormat"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>    
-<a href="/cs336sample1/code/endUser/ebay/defaultPage.jsp" >Back to main FAQ<br/> </a>
+<a href="/cs336Sample1/code/endUser/ebay/defaultPage.jsp" >Back to main FAQ<br/> </a>
 
 		<h1 style="text-align:center;"> FAQ</h1>
 <%   String itemName = request.getParameter("keyword"); %>
