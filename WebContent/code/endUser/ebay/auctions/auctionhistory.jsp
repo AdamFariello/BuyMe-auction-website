@@ -36,7 +36,7 @@
 	<h1 style="text-align:center;"> Bid History</h1>
 		<div style="text-align:center;"> 
 		<form action='/cs336sample1/code/endUser/ebay/bid/showAllBids.jsp'>
-			<input type="submit" value="Enter">
+		<input type="submit" value="Enter">
 			<%
 				//You can't invoke a jsp variable from html
 				out.print("<input type='hidden' id='itemID' name='itemID' value='"); 

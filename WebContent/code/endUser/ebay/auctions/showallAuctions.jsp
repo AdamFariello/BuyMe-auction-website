@@ -7,7 +7,7 @@
 <%@ page import="com.cs336.pkg.ApplicationDB" %>
 
 <!DOCTYPE html>
-<a href="/cs336sample1/code/endUser/ebay/defaultPage.jsp" >HOME<br/> </a>
+<a href="success.jsp" >HOME<br/> </a>
 
 <%
 try {

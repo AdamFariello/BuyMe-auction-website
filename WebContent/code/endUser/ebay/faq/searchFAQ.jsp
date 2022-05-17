@@ -5,11 +5,10 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>   
 <%@ page import="com.cs336.pkg.ApplicationDB" %> 
+
 <a href="/cs336sample1/code/endUser/ebay/defaultPage.jsp" >Back to main FAQ<br/> </a>
-
-		<h1 style="text-align:center;"> FAQ</h1>
+<h1 style="text-align:center;"> FAQ</h1>
 <%   String itemName = request.getParameter("keyword"); %>
-
 
 </body>
 </html>

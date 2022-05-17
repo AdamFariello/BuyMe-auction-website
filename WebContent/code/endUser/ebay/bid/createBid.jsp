@@ -59,9 +59,11 @@
 			//response.sendRedirect("showAllBids.jsp");
 		} else {
 			out.println("bid too low or illegal");
+			out.println("<a href='createBid.jsp'>try again</a> <br>");
 		}
 	} catch (Exception e) {
 		out.println("Bad bid :)");
+		out.println("<a href='createBid.jsp'>try again</a> <br>");
 		out.println(e);
 	}
 %>
